@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import LinkList from './LinkList';
+import MainPage from './MainPage';
 
 class App extends Component {
   render() {
-    return <LinkList />;
+    return <MainPage />;
   }
 }
 
