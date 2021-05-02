@@ -33,13 +33,13 @@ const MainPage = () => {
     return (
         <div>
             {data && data.bannerCollection && data.bannerCollection.items.map((obj, index) => (
-                <Banner body={obj.body} buttonText={obj.buttonText} heading={obj.heading} theme={themes[obj.theme]} />
+                <Banner key={index} body={obj.body} buttonText={obj.buttonText} heading={obj.heading} theme={themes[obj.theme]} />
             ))}
             {data && data.blogPostCollection && data.blogPostCollection.items.map((obj, index) => (
                 <BlogPost key={index} title={obj.title} author={obj.author.name} body={obj.body} publishDate={obj.publishDate} />
             ))}
             {data && data.featuredQuoteCollection && data.featuredQuoteCollection.items.map((obj, index) => (
-                <FeaturedQuote body={obj.body} buttonText={obj.buttonText} heading={obj.heading} theme={themes[obj.theme]} />
+                <FeaturedQuote key={index} body={obj.body} buttonText={obj.buttonText} heading={obj.heading} theme={themes[obj.theme]} />
             ))}
         </div>
     );
