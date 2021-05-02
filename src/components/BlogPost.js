@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { tokens } from '@sparkimaginations/imperion-system/';
+import { tokens } from '@sparkimaginations/imperion-system';
 import ReactMarkdown from 'react-markdown';
 
 const StyledBlogPost = styled.div`
+    color: ${(props) => props.theme.fg};
+    background-color: ${(props) => props.theme.bg};
     padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
-    color: ${tokens.colors.kleinBlue};
-    background-color: ${tokens.colors.black};
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ const StyledBlogPost = styled.div`
 `;
 
 const Header = styled.div`
-    background-color: #020021;
+    background-color: ${(props) => props.theme.bg};
     width: 500px;
     margin-bottom: ${tokens.spacers.spacer10}
 `;
@@ -33,16 +33,17 @@ const Author = styled.p`
 
 const Body = styled(ReactMarkdown)`
     padding: ${tokens.spacers.spacer50};
-    background-color: #020021;
+    color: ${(props) => props.theme.fg};
+    background-color: ${(props) => props.theme.bg};
     text-align: left;
     width: 800px;
     overflow: scroll;
 `;
 
 const BlogPost = (props) => {
-    const { title, author, body, publishDate } = props;
+    const { title, author, body, publishDate, theme } = props;
     return (
-        <StyledBlogPost>
+        <StyledBlogPost theme={theme}>
             <Header>
                 <Title>{title}</Title>
                 published by
