@@ -2,6 +2,7 @@
   "name": "graphql-apollo-react",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT-Modern-Variant",
   "dependencies": {
     "@apollo/client": "^3.3.16",
     "@sparkimaginations/imperion-system": "^1.0.15",
@@ -12,6 +13,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
