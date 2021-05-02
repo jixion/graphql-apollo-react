@@ -5,7 +5,7 @@ import { components, themes } from '@sparkimaginations/imperion-system';
 
 const FEED_QUERY = gql`
 query {
-  blogPostCollection {
+  blogPostCollection(order: publishDate_DESC)  {
     items {
       title
       author {
