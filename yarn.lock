@@ -1566,10 +1566,12 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sparkimaginations/imperion-system@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@sparkimaginations/imperion-system/-/imperion-system-1.0.15.tgz#3165057b7652df36f291079d97b268b9fe589567"
-  integrity sha512-lCy72eMx61khuzJ7thFxczIIt3miyP37Z8an+ifhSQbvWY7IkvcvMUzCvBaM8PD2Dld3feHgc9w+07bhgcUZwQ==
+"@sparkimaginations/imperion-system@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@sparkimaginations/imperion-system/-/imperion-system-1.0.17.tgz#dcbbb50df34704fb644ce696b7b9895e15f7abe2"
+  integrity sha512-zPom9Xn+KDXe35SZAB9939l+KKOq4Qq3ImK7qffOFAaM98dBKLrHGKyHepvFlm3ewuY+hoVpO9g51rUJyseIHA==
+  dependencies:
+    react-markdown "^6.0.1"
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"

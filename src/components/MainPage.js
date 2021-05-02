@@ -1,7 +1,6 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { components, themes } from '@sparkimaginations/imperion-system';
-import BlogPost from "./BlogPost";
 
 
 const FEED_QUERY = gql`
@@ -35,10 +34,8 @@ query {
       subtext
       theme
       title
-      url {
-        image {
-          url
-        }
+      image {
+        url
       }
     }
   }
@@ -48,7 +45,13 @@ const MainPage = () => {
     const data = useQuery(FEED_QUERY).data;
     const Banner = components.modules.Banner;
     const FeaturedQuote = components.modules.FeaturedQuote;
+    const BlogPost = components.modules.BlogPost;
     const refs = [
+        React.useRef(),
+        React.useRef(),
+        React.useRef(),
+        React.useRef(),
+        React.useRef(),
         React.useRef(),
         React.useRef(),
         React.useRef(),
@@ -67,15 +70,13 @@ const MainPage = () => {
                 <Banner key={index} body={obj.body} buttonText={obj.buttonText} heading={obj.heading} theme={themes[obj.theme]} ref={refs[index]}/>
             ))}
             {data && data.blogPostCollection && data.blogPostCollection.items.map((obj, index) => (
-                <BlogPost key={index} title={obj.title} author={obj.author.name} body={obj.body} publishDate={obj.publishDate} theme={themes[obj.theme]} />
+                <BlogPost key={index} title={obj.title} author={obj.author.name} body={obj.body} publishDate={obj.publishDate} theme={themes[obj.theme]} ref={refs[index+5]} />
             ))}
             {data && data.featuredQuoteCollection && data.featuredQuoteCollection.items.map((obj, index) => {
                 const myObj = {...obj}
-                myObj.url = obj.url.image.url;
+                myObj.url = obj.image.url;
                 myObj.theme = themes[obj.theme];
-                return (
-                    <FeaturedQuote key={index} {...myObj} ref={refs[index+5]} />
-                );
+                return <FeaturedQuote key={index} {...myObj} ref={refs[index+10]} />;
 
             })}
         </div>
