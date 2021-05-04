@@ -1566,10 +1566,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sparkimaginations/imperion-system@^1.0.19":
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/@sparkimaginations/imperion-system/-/imperion-system-1.0.19.tgz#8cbef1645a74a50fe83716b2a7d518f9ac67b590"
-  integrity sha512-NyaEYuVYsIdtsvigqaajLBhKUd36wrc/s2VcuUvW4FzVmyEs4aEJaXURsgEA1Q9xF1fQP6HF3qPvwuq0Q0f6sg==
+"@sparkimaginations/imperion-system@^1.0.22":
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@sparkimaginations/imperion-system/-/imperion-system-1.0.22.tgz#07772daa53f39ca7e5640ac5b5ed0dc531267d7e"
+  integrity sha512-LJY40yLVLJxYnhztmbCJSth91WXsV1ka+5nqF82xEreQUulRAX6di8rf7T3aKwVVqib+Kdeerzh/aWbc+wLM9Q==
   dependencies:
     react-markdown "^6.0.1"
 
