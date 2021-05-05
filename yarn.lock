@@ -1566,7 +1566,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sparkimaginations/imperion-system@^1.0.22":
+"@sparkimaginations/imperion-system@^1.0.27":
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/@sparkimaginations/imperion-system/-/imperion-system-1.0.27.tgz#f0c2a64bdeae1f0990ffabf676d72140d34a0cd1"
   integrity sha512-Zy7CN0aNFW/Px84SRgAbM9dwBpETvsSF2NbDCZivTXseTM+dRSjd3avnQ3kMmXlRELlvuBPxa7Ha0iQYiQj0rQ==
