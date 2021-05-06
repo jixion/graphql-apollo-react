@@ -6,6 +6,10 @@ import {tokens} from "@sparkimaginations/imperion-system";
 
 const APOD = styled.div`
     padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer40};
+    
+    & img {
+        width: 100%
+    }
 `;
 
 const MainPage = () => {
@@ -14,15 +18,14 @@ const MainPage = () => {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
-    return (
-        <>
-            {data && data.apod && <APOD>
-                <h1>{data.apod.title}</h1>
-                <h3>{data.apod.date}</h3>
-                <p>{data.apod.explanation}</p>
-                <img src={data.apod.hdurl} alt={data.apod.explanation} />
-            </APOD>}
-        </>
+    return (<>{data && data.apod &&
+                <APOD>
+                    <h1>{data.apod.title}</h1>
+                    <h3>{data.apod.date}</h3>
+                    <p>{data.apod.explanation}</p>
+                    <img src={data.apod.hdurl} alt={data.apod.explanation} />
+                </APOD>
+            }</>
     );
 }
 
