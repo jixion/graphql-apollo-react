@@ -5,7 +5,7 @@ import { HEROKU } from '../queries';
 import {tokens} from "@sparkimaginations/imperion-system";
 
 const APOD = styled.div`
-    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer40};
+    padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
     
     & img {
         width: 100%
@@ -20,10 +20,11 @@ const MainPage = () => {
 
     return (<>{data && data.apod &&
                 <APOD>
+                    <img src={data.apod.hdurl} alt={data.apod.explanation} />
                     <h1>{data.apod.title}</h1>
+                    <h2>Copyright {data.apod.copyright}</h2>
                     <h3>{data.apod.date}</h3>
                     <p>{data.apod.explanation}</p>
-                    <img src={data.apod.hdurl} alt={data.apod.explanation} />
                 </APOD>
             }</>
     );
