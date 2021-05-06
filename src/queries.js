@@ -1,5 +1,12 @@
 import { gql } from "@apollo/client";
 
+export const HEROKU = gql`
+query {
+    locations {
+        name
+    }
+}`
+
 export const FEED_QUERY = gql`
 query {
   bannerCollection(limit: 5, order: sys_firstPublishedAt_ASC) {

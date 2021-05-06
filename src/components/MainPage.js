@@ -1,10 +1,11 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { components, themes } from '@sparkimaginations/imperion-system';
-import { FEED_QUERY } from '../queries';
+import { FEED_QUERY, HEROKU } from '../queries';
 
 const MainPage = () => {
-    const data = useQuery(FEED_QUERY).data;
+    const data = [];// = useQuery(FEED_QUERY).data;
+    const myGraphQL = useQuery(HEROKU).data;
     const refs = [
         React.useRef(),
         React.useRef(),
@@ -29,6 +30,7 @@ const MainPage = () => {
 
     return (
         <div>
+            {myGraphQL && myGraphQL["locations"] && myGraphQL.locations.map((loc, i)=>(<span key={i}>{loc.name}<br /></span>))}
             {data && data["bannerCollection"] && data["bannerCollection"].items.map((obj, index) => {
                 const myObj = {...obj}
                 myObj.theme = themes[obj.theme];
