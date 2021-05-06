@@ -1,27 +1,28 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import styled from 'styled-components';
 import { HEROKU } from '../queries';
+import {tokens} from "@sparkimaginations/imperion-system";
+
+const APOD = styled.div`
+    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer40};
+`;
 
 const MainPage = () => {
-    const data = useQuery(HEROKU).data;
-    let apod = data["apod"];
+    const { loading, error, data } = useQuery(HEROKU);
 
-    // copyright
-    // date
-    // explanation
-    // hdurl
-    // media_type
-    // service_version
-    // title
-    // url
+    if (loading) return 'Loading...';
+    if (error) return `Error! ${error.message}`;
+
     return (
-        <div>
-            {apod && <div>
-                <h1>{apod.title}</h1>
-                <p>{apod.explanation}</p>
-                <img src={apod.hdurl} alt={apod.explanation} />
-            </div>}
-        </div>
+        <>
+            {data && data.apod && <APOD>
+                <h1>{data.apod.title}</h1>
+                <h3>{data.apod.date}</h3>
+                <p>{data.apod.explanation}</p>
+                <img src={data.apod.hdurl} alt={data.apod.explanation} />
+            </APOD>}
+        </>
     );
 }
 
