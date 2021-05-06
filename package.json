@@ -5,11 +5,12 @@
   "license": "MIT-Modern-Variant",
   "dependencies": {
     "@apollo/client": "^3.3.16",
-    "@sparkimaginations/imperion-system": "^1.0.27",
+    "@sparkimaginations/imperion-system": "^1.0.28",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "graphql": "^15.5.0",
+    "nexjs": "^0.2.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-markdown": "^6.0.1",
