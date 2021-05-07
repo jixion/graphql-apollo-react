@@ -37,6 +37,8 @@ const MainPage = () => {
                 <NEO>
                     <h1>{neo.name}</h1>
                     <h2>{neo.id}</h2>
+                    <h3>{neo.is_potentially_hazardous_asteroid}</h3>
+                    <h3>{neo.diameter}</h3>
                 </NEO>
             )}
             {data.locations.map(loc =>
@@ -48,7 +50,6 @@ const MainPage = () => {
             <APOD>
                 <img src={data.apod.hdurl} alt={data.apod.explanation} />
                 <h1>{data.apod.title}</h1>
-                <h2>Copyright {data.apod.copyright}</h2>
                 <h3>{data.apod.date}</h3>
                 <p>{data.apod.explanation}</p>
             </APOD>

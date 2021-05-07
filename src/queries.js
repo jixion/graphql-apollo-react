@@ -6,6 +6,8 @@ query {
         near_earth_objects {
             id
             name
+            is_potentially_hazardous_asteroid
+            diameter
         }
     }
     locations {
@@ -13,7 +15,6 @@ query {
         name
     }
     apod {
-        copyright
         date
         explanation
         hdurl
