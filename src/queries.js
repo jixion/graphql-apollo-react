@@ -2,6 +2,12 @@ import { gql } from "@apollo/client";
 
 export const HEROKU = gql`
 query {
+    neos {
+        near_earth_objects {
+            id
+            name
+        }
+    }
     locations {
         id
         name
