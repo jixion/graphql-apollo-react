@@ -33,9 +33,7 @@ const MainPage = () => {
         <>
             {data.neos.map(neo =>
                 <NEO>
-                    <h1>{neo.name}</h1>
-                    <h2>{neo.id}</h2>
-                    <h3>{neo.is_potentially_hazardous_asteroid ? 'Might kill us' : 'Might not kill us'}</h3>
+                    <h1>The NEO called: {neo.name} with id {neo.id} {neo.is_potentially_hazardous_asteroid ? 'might kill us' : 'might not kill us'}</h1>
                 </NEO>
             )}
             {data.locations.map(loc =>
