@@ -5,7 +5,7 @@ import { HEROKU } from '../queries';
 import { tokens } from "@sparkimaginations/imperion-system";
 
 const APOD = styled.div`
-    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
+    padding: ${tokens.spacers.spacer10};
     height: 25%;
     
     & img {
@@ -15,12 +15,12 @@ const APOD = styled.div`
 
 const ISSLocs = styled.div`
     background-color: orange;
-    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
+    padding: ${tokens.spacers.spacer10};
 `;
 
 const NEO = styled.div`
     background-color: blue;
-    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
+    padding: ${tokens.spacers.spacer10};
 `
 
 const MainPage = () => {
