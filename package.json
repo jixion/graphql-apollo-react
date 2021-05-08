@@ -1,6 +1,9 @@
 {
   "name": "graphql-apollo-react",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x",
+  },
   "private": true,
   "license": "MIT-Modern-Variant",
   "dependencies": {
