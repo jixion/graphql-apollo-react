@@ -15,12 +15,12 @@ const APOD = styled.div`
 
 const ISSLocs = styled.div`
     background-color: orange;
-    padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
+    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
 `;
 
 const NEO = styled.div`
     background-color: blue;
-    padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
+    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
 `
 
 const MainPage = () => {
