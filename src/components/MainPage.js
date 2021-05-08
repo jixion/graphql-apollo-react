@@ -2,12 +2,11 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import { HEROKU } from '../queries';
-import {tokens} from "@sparkimaginations/imperion-system";
+import { tokens } from "@sparkimaginations/imperion-system";
 
 const APOD = styled.div`
-    padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
+    padding: ${tokens.spacers.spacer20} ${tokens.spacers.spacer10};
     height: 25%;
-    width: 25%;
     
     & img {
         width: 100%
@@ -20,7 +19,6 @@ const ISSLocs = styled.div`
 `;
 
 const NEO = styled.div`
-    width: 33%;
     background-color: blue;
     padding: ${tokens.spacers.spacer40} ${tokens.spacers.spacer20};
 `
@@ -33,12 +31,11 @@ const MainPage = () => {
 
     return (
         <>
-            {data.neos.near_earth_objects.map(neo =>
+            {data.neos.map(neo =>
                 <NEO>
                     <h1>{neo.name}</h1>
                     <h2>{neo.id}</h2>
-                    <h3>{neo.is_potentially_hazardous_asteroid}</h3>
-                    <h3>{neo.diameter}</h3>
+                    <h3>{neo.is_potentially_hazardous_asteroid ? 'Might kill us' : 'Might not kill us'}</h3>
                 </NEO>
             )}
             {data.locations.map(loc =>

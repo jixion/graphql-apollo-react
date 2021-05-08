@@ -3,12 +3,9 @@ import { gql } from "@apollo/client";
 export const HEROKU = gql`
 query {
     neos {
-        near_earth_objects {
-            id
-            name
-            is_potentially_hazardous_asteroid
-            diameter
-        }
+        id
+        name
+        is_potentially_hazardous_asteroid
     }
     locations {
         id
