@@ -10,6 +10,10 @@ query {
     locations {
         id
         name
+        latitude
+        longitude
+        velocity
+        timestamp
     }
     apod {
         date

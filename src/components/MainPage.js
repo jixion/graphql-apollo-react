@@ -38,8 +38,9 @@ const MainPage = () => {
             )}
             {data.locations.map(loc =>
                 <ISSLocs>
-                    <h1>Satellite name: {loc.name}</h1>
-                    <h2>Sattelite ID#: {loc.id}</h2>
+                    <h1>Position info at timestamp: {loc.timestamp} for Satellite: {loc.name} with ID#: {loc.id}</h1>
+                    <h6>Travelling at a velocity of: {loc.velocity}</h6>
+                    <h6>{loc.name} is currently over earth at a latitude of: {loc.latitude} and longitude of: {loc.longitude}</h6>
                 </ISSLocs>
             )}
             <APOD>
