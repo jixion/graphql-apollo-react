@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import { HEROKU } from '../queries';
 import { tokens } from "@sparkimaginations/imperion-system";
+import Card from "./Card";
 
 const APOD = styled.div`
     padding: ${tokens.spacers.spacer10};
@@ -21,6 +22,18 @@ const ISSLocs = styled.div`
 const NEO = styled.div`
     background-color: blue;
     padding: ${tokens.spacers.spacer10};
+`
+
+const Cards = styled.div`
+    background: url("https://duomly.nyc3.digitaloceanspaces.com/articles/coding/alps-lake.jpg");
+    background-color: green;
+    width: 450px;
+    padding: ${tokens.spacers.spacer10}
+`
+
+const CardWrapper = styled.div`
+    width: 400px;
+    padding: ${tokens.spacers.spacer10}
 `
 
 const MainPage = () => {
@@ -49,6 +62,13 @@ const MainPage = () => {
                 <h3>{data.apod.date}</h3>
                 <p>{data.apod.explanation}</p>
             </APOD>
+            <Cards>
+                {data.cards.map(card =>
+                    <CardWrapper>
+                        <Card card={card} />
+                    </CardWrapper>
+                )}
+            </Cards>
         </>
     );
 }

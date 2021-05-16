@@ -24,6 +24,7 @@ yarn-error.log*
 
 # idea
 .idea/
+*.iml
 
 # secrets
 .env
