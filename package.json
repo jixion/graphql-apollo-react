@@ -23,7 +23,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "next start",
+    "start": "next start -p $PORT",
     "build": "next build",
     "test": "next test",
     "dev": "next dev"
