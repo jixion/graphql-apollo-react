@@ -11,7 +11,7 @@ const StyledAPOD = styled.div`
     height: 25%;
     
     & img {
-        width: 100%
+        width: 25%
     }
 `;
 
