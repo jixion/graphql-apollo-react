@@ -3,7 +3,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: "http://graphql-experiment.herokuapp.com",
+    uri: "http://jixion.com:5000",
     cache: new InMemoryCache(),
 });
 

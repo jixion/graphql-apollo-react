@@ -11,7 +11,7 @@ const ISSLocs = styled.div`
 `;
 
 function ISS({ data }) {
-    return <Layout>{data.locations.map((loc, i) =>
+    return <Layout>{data.issLocations.map((loc, i) =>
         <ISSLocs key={i}>
             <h1>Position info at timestamp: {loc.timestamp} for satellite: {loc.name} with ID#: {loc.id}</h1>
             <h2>Travelling at a velocity of: {loc.velocity} relative to the earth</h2>
@@ -24,7 +24,7 @@ export async function getStaticProps() {
     const { data } = await client.query({
         query: gql`
             query {
-              locations (limit: 1) {
+              issLocations {
                 name
                 id
                 latitude

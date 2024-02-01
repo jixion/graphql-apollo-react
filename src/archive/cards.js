@@ -4,7 +4,7 @@ import {tokens} from "@sparkimaginations/imperion-system";
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import Card from "../components/Card";
-import Layout from "./layouts";
+import Layout from "../pages/layouts";
 
 const StyledCards = styled.div`
     background: url("https://duomly.nyc3.digitaloceanspaces.com/articles/coding/alps-lake.jpg");
